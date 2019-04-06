@@ -10,7 +10,7 @@ import xlwt
 
 # get code
 def get_content(page):
-    url = 'http://search.51job.com/list/000000,000000,0000,00,9,99,php,2,' + str(page) + '.html'
+    url = 'http://search.51job.com/list/000000,000000,0000,00,9,99,python,2,' + str(page) + '.html'
     a = urllib.urlopen(url)  # open website
     html = a.read().decode('gbk')  # read code and transfer unicode
     return html
@@ -46,3 +46,12 @@ for each in range(1, 10):
 
 wb.save(newTable)
 
+# lots of page handle and download
+# for j in range(1, 10):
+#     print("getting" + str(j) + "page data...")
+#     html = get_content(j)  # get the source code
+#     for i in get(html):
+#         print(i[0], i[1], i[2], i[3], i[4])
+#         with io.open('51job.txt', 'a', encoding='utf-8') as f:
+#             f.write(i[0] + '\t' + i[1] + '\t' + i[2] + '\t' + i[3] + '\t' + i[4] + '\n')
+#             f.close()
