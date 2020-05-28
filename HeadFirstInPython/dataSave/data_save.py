@@ -1,6 +1,7 @@
 # @File    : data_save.py
 # @Date    : 2020-05-28
 # @Author  : shengjia
+import pickle
 
 man = []
 other = []
@@ -35,6 +36,7 @@ finally:
     if 'data' in locals():
         data.close()
 
+# new way for with
 try:
     with open('man_data.txt', 'w') as man_file:
         print(man)
@@ -42,3 +44,14 @@ try:
         print(other)
 except IOError as err:
     print('file error' + str(err))
+
+# new way for pickle
+try:
+    with open('man_data.txt', 'wb') as man_file, open('other_data.txt', 'wb') as other_file:
+        pickle.dump(man, man_file)
+        pickle.dump(other, other_file)
+except IOError as err:
+    print('File error' + str(err))
+
+except pickle.PickleError as perr:
+    print('pickling error:' + str(perr))
