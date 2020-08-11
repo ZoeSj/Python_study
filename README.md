@@ -5,3 +5,5 @@ here are some different dict for examples.
 
 ## basic python by mooc
 video url: [《Python语言基础与应用》](https://www.icourse163.org/course/PKU-1003479006#/info)
+
+## python 100 days

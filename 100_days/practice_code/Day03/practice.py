@@ -18,5 +18,4 @@ elif x > -1:
 else:
     y = 5 * x + 3
 
-print(f'y = {y:0.2f}')
-
+# print(f'y = {y:0.2f}')
